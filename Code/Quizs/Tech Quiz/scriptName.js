@@ -114,6 +114,8 @@ document.querySelector(".dark").onclick = function icon( ) {
   let sun = document.querySelector('#sun');
   let b1 = document.querySelector('.border1');
   let b2 = document.querySelector('.cir1')
+  // let f=document.querySelector('.next');
+  // f.classList.toggle('active');
   b2.classList.toggle('active');
   b1.classList.toggle('active');
   moon.classList.toggle('active');
@@ -137,10 +139,12 @@ document.getElementById("sun").onclick = function icon(){
 
 var num = 0;
 counter = num + 1;
+
 btn = document.getElementById("nxt").addEventListener("click",function(){
+  document.querySelector('#nxt').classList.remove('show');
 
   if(counter == 9){
-    document.getElementById("nxt").innerHTML = "Submet >>";
+    document.getElementById("nxt").innerHTML = "Submit >>";
   }
 
   if(counter == 10){
@@ -197,7 +201,7 @@ function btn1() {
   document.getElementById('btn2').style.background = '#0d83ae4d';
   document.getElementById('btn3').style.background = '#0d83ae4d';
   document.getElementById('btn4').style.background = '#0d83ae4d';
-  
+  document.querySelector('#nxt').classList.add('show')
 
 }
 
@@ -207,6 +211,7 @@ function btn1() {
   document.getElementById('btn1').style.background = '#0d83ae4d';
   document.getElementById('btn3').style.background = '#0d83ae4d';
   document.getElementById('btn4').style.background = '#0d83ae4d';
+  document.querySelector('#nxt').classList.add('show')
 }
 function btn3() {
   choice = 3;
@@ -214,6 +219,7 @@ function btn3() {
   document.getElementById('btn1').style.background = '#0d83ae4d';
   document.getElementById('btn2').style.background = '#0d83ae4d';
   document.getElementById('btn4').style.background = '#0d83ae4d';
+  document.querySelector('#nxt').classList.add('show')
 
 }
 function btn4() {
@@ -222,6 +228,7 @@ function btn4() {
   document.getElementById('btn1').style.background = '#0d83ae4d';
   document.getElementById('btn2').style.background = '#0d83ae4d';
   document.getElementById('btn3').style.background = '#0d83ae4d';
+  document.querySelector('#nxt').classList.add('show')
 
   }
   ///////////////////local storage////////////////////////

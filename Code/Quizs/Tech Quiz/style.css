@@ -228,6 +228,7 @@ color: #ccc;
   width:10%;
   height: 7%;
   border-radius: 15px;
+  text-decoration: none;
 }
 .previous:hover {
   background-color: #ddd;
@@ -248,6 +249,11 @@ color: #ccc;
   width:10%;
   height: 7%;
   border-radius: 15px;
+  text-decoration: none;
+  display: none;
+}
+.show{
+  display: block;
 }
 .next:hover {
   background-color: #ddd;
@@ -259,6 +265,56 @@ color: #ccc;
 }
 
 /* ******************************responsive************************************* */
+@media screen and (min-width:888px) and (max-width:1254px){
+  .fcircle1{
+    clip-path: none;
+  }
+  .scircle1{
+    clip-path: none;
+  }
+  
+
+
+.border1{
+ height: 450px;
+}
+.btn1{
+ width: 200px;
+}
+.btn2{
+width: 200px;
+
+}
+.Question{
+ font-size: 20px;
+}
+.previous{
+font-size: 13px;
+width: 70px;
+}
+.next{
+font-size: 13px;
+width: 70px;
+}
+.Q{
+ top: -40px;
+ 
+}
+.line{
+top: 80px;
+}
+.btn{
+ top:160px;
+}
+#moon{
+ left:90%;
+}
+#sun{
+left:90%; 
+}
+}
+
+
 @media screen and (max-width:1282px){
   .btn{
     left:25%
@@ -615,7 +671,37 @@ top:80px
  }
 }
 
+
+@media screen and  (max-width:377px){
+.btn1{
+  width: 160px;
+  height: 45px;
+  font-size: 15px;
+  
+ }
+.btn2{
+ width: 160px;
+ font-size: 15px;
+ height: 45px;
+}
+.Question{
+  font-size: 10px;
+}
+
+.Q{
+  font-size: 35px;
+  top:-20px
+}
+.border1{
+  width: 83%;
+  left: 15px;
+}
+.Question{
+  font-size: 15px;
+}
+}
 @media screen and  (max-width:317px){
+  
 .fcircle1{
   clip-path: none;
 }

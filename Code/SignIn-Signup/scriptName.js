@@ -7,29 +7,12 @@ let flag_sign_up;
 validationResult = true;
 validationResult1 = true;
 validationResult2 = true;
-
-sign_up_buttton.addEventListener("click" , function(){  
-    if(getWidth()> 768){
-
-        container.classList.add("active");
-        body.classList.add("active");
-        flag_sign_up = true;
-        flag_sign_in = false;
-        }else{
-   
-            document.getElementsByClassName("sign-in-container")[0].classList.add("active-media");
-            document.getElementsByClassName("overlay-container")[0].classList.add("active-media");
-            document.getElementsByClassName("overlay")[0].classList.add("active-media");
-            document.getElementsByClassName("form-container")[0].classList.add("active-media");
-            document.getElementsByClassName("sign-up-container")[0].classList.add("active-media");
-        }
-
-})
+validationResult3 = true;
 
 sign_in_buttton.addEventListener("click" , function(){
     if(getWidth() > 768){
-        flag_sign_up = false;
-        flag_sign_in = true;
+        flag_sign_up = true;
+        flag_sign_in = false;
     container.classList.remove("active");
     body.classList.remove("active");
     }else{
@@ -41,6 +24,29 @@ sign_in_buttton.addEventListener("click" , function(){
             flag_sign_up = false;
     }
 })
+
+
+
+
+sign_up_buttton.addEventListener("click" , function(){  
+    if(getWidth()> 768){
+
+        container.classList.add("active");
+        body.classList.add("active");
+        flag_sign_up = false;
+        flag_sign_in = true;
+        }else{
+   
+            document.getElementsByClassName("sign-in-container")[0].classList.add("active-media");
+            document.getElementsByClassName("overlay-container")[0].classList.add("active-media");
+            document.getElementsByClassName("overlay")[0].classList.add("active-media");
+            document.getElementsByClassName("form-container")[0].classList.add("active-media");
+            document.getElementsByClassName("sign-up-container")[0].classList.add("active-media");
+        }
+
+})
+
+
 
 
 function getWidth() {
@@ -79,6 +85,29 @@ document.getElementById('register').addEventListener('click', function() {
         localStorage.setItem("UserName", nameInput);
         nameerror.style.border = "none";
     }
+
+    let Lnameerror = document.querySelector("#Lname");
+let LnameInput = document.querySelector("#Lname").value;
+let LnameExp= /^[a-z_-\s]{3,15}$/;
+ validationResult = nameExp.test(LnameInput);
+
+if (validationResult == false && LnameInput == '') {
+    document.querySelector("#Lname").placeholder = "Type last name here..";
+    Lnameerror.style.animation = "mynewmove .4s ";
+    Lnameerror.style.border = "2px solid red";
+    Lnameerror.style.borderRadius = "5px ";
+}
+if (validationResult == false && LnameInput != '') {
+    document.querySelector("#Lname").value = '';
+    document.querySelector("#Lname").placeholder = "Last name from 3 to 15 char";
+    Lnameerror.style.animation = "mynewmove .4s ";
+    Lnameerror.style.border = "2px solid red";
+    Lnameerror.style.borderRadius = "5px ";
+} else if (validationResult == true) {
+   
+    localStorage.setItem("UserName", LnameInput);
+    Lnameerror.style.border = "none";
+}
     let emailerror = document.querySelector("#email");
     let emailInput = document.querySelector("#email").value;
     let emailExp = /^([a-zA-Z0-9_-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,})$/;
@@ -119,7 +148,22 @@ document.getElementById('register').addEventListener('click', function() {
         passerror.style.borderRadius = "5px ";
 
     }
-
+    let passerror1 = document.querySelector("#cpassword");
+    let passInput1 = document.querySelector('#cpassword').value;
+    let passExp1 = /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$/;
+    validationResult3 = passExp1.test(passInput1);
+    // if (validationResult2 == false && passInput == '') {
+        if(validationResult3 == true && passInput1==passInput){
+            console.log('hello2')
+            localStorage.setItem("Password", passInput1);
+       passerror1.style.border = "none";
+        }else {
+        console.log('hello3')
+        document.querySelector("#cpassword").placeholder = "password does not match";
+        passerror1.style.border = "2px solid red ";
+        passerror1.style.animation = "mynewmove .4s ";
+        passerror1.style.borderRadius = "5px ";
+    }
     // let passerror = document.querySelector("#password");
     // let passInput = document.querySelector('#password').value;
     // let passExp = /(?=(.*[0-9]))(?=.*[!@#$%^&*])(?=.*[a-z])(?=(.*[A-Z]))(?=(.*)).{8,}/;
@@ -145,7 +189,7 @@ document.getElementById('register').addEventListener('click', function() {
 
 
 
-    if(validationResult & validationResult1 & validationResult2){
+    if(validationResult & validationResult1 & validationResult2 & validationResult3){
         if(getWidth() > 768){
             container.classList.remove("active");
             body.classList.remove("active");

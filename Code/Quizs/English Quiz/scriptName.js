@@ -56,7 +56,7 @@ questions=[
 count = 0
 function next() {
     count++;
-
+    document.querySelector('#next').classList.remove('show')
 
     if (data < 5) {
         data = data + 1;
@@ -158,6 +158,7 @@ function returnAnswer1(){
         document.querySelector("#op2").style.background='#E5E5E5'
         document.querySelector("#op3").style.background='#E5E5E5'
         document.querySelector("#op4").style.background='#E5E5E5'
+        document.querySelector('#next').classList.add('show')
 }
 function returnAnswer2(){
     choice = 2;
@@ -165,6 +166,7 @@ function returnAnswer2(){
         document.querySelector("#op2").style.background='#98C1D9'
         document.querySelector("#op3").style.background='#E5E5E5'
         document.querySelector("#op4").style.background='#E5E5E5'
+        document.querySelector('#next').classList.add('show')
 }
 function returnAnswer3(){
     choice = 3;
@@ -172,6 +174,7 @@ function returnAnswer3(){
         document.querySelector("#op2").style.background='#E5E5E5'
         document.querySelector("#op3").style.background='#98C1D9'
         document.querySelector("#op4").style.background='#E5E5E5'
+        document.querySelector('#next').classList.add('show')
 }
 function returnAnswer4(){
     choice = 4;
@@ -179,6 +182,7 @@ function returnAnswer4(){
         document.querySelector("#op2").style.background='#E5E5E5'
         document.querySelector("#op3").style.background='#E5E5E5'
         document.querySelector("#op4").style.background='#98C1D9'
+        document.querySelector('#next').classList.add('show')
 }
        
 

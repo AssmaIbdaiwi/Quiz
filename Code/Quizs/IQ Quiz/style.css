@@ -19,6 +19,30 @@ body{
     --sub-color2:#BBF085;
     --sub-color3:#F24726;
 }
+.fcircle1 {
+    background-color: #023047;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(680px at right 580px);
+  
+  }
+  .cir1.active .fcircle1{
+  background-color: var(--main-color4);
+  }
+  
+  .scircle1 {
+    background-color: #023047;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(700px at left 100px);
+  
+  }
 
 body{
     font-family: 'Work Sans', sans-serif;
@@ -29,10 +53,10 @@ body{
     height: 100vh;
     margin: 0 50px;
     overflow: hidden;
-    background-image: url(imges/Background.png);
+    /* background-image: url(imges/Background.png);
     background-repeat:no-repeat ;
     background-position: right;
-    background-color: var(--main-color3);
+    background-color: var(--main-color3); */
    
     
 }
@@ -96,7 +120,7 @@ overflow: hidden;
   border: 1px solid black;
   cursor: pointer;
   position: relative;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #0D83AE;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
@@ -233,7 +257,7 @@ section{
 
  .btn {
     appearance: button;
-    background-color: #000;
+    background-color: #0D83AE;
     background-image: none;
     border: 1px solid #000;
     border-radius: 4px;

@@ -238,11 +238,11 @@ background-color :#EC8757;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: black;
     top: 57%;
     left: 37%;
-    border: 2px orange solid;
-
+    background-color: #0D83AE;
+    color: #E5E5E5;
+    border: #0D83AE;
 }
 
 
@@ -475,6 +475,7 @@ span:nth-child(22) {
 }
 
 /* ************************************responsive********************************************************* */
+
 @media screen and (max-width:1241px){
 .englishtxt {
     font-size: 15px;
@@ -754,3 +755,4 @@ width: 80%;
 height: 80px;
 }
 }
+
